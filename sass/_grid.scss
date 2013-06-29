@@ -1,0 +1,25 @@
+
+
+$row-width: emCalc(1440px);
+$column-gutter: emCalc(40px);
+$total-columns: 12;
+
+$width-wrap    : 100%;
+$width-grid    : emCalc(1200px);
+$width-almost  : 920px;
+$width-content : emCalc(640px);
+
+$tiny-screen: emCalc(480px);
+$small-screen: emCalc(700px);
+$medium-screen: emCalc(1000px);
+$large-screen: $width-grid;
+
+$screen: "only screen";
+$small: "only screen and (min-width:"#{$small-screen}")";
+$medium: "only screen and (min-width:"#{$medium-screen}")";
+$large: "only screen and (min-width:"#{$large-screen}")";
+
+$baby-bear: "only screen and (min-width:"#{$tiny-screen}")";
+$mama-bear: "only screen and (min-width:"#{$small-screen}")";
+$papa-bear: "only screen and (min-width:"#{$medium-screen}")";
+$big-bear: "only screen and (min-width:"#{$large-screen}")";
