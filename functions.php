@@ -217,8 +217,8 @@ function foundation_widgets() {
 			'description' => __( 'This sidebar is located on the right-hand side of each page.', 'foundation' ),
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_title' => '<h6 class="border-bottom">',
+			'after_title' => '</h6>',
 		) );
 
 }

@@ -14,9 +14,9 @@ get_header(); ?>
     <!-- Main Content -->
     <div class="large-12 columns" role="main">
 
-      <p><a href="/">home</a> / <a href="/item/">collections</a> / item details<p>
+      <p><a href="/">home</a> / <a href="/item/">tour &amp; recording</a> / details<p>
 
-      <h1 class="pagetitle">Tours &amp; Recording Details</h1>
+      <h1 class="pagetitle">Tour &amp; Recording Details</h1>
 
   		<?php if ( have_posts() ) : ?>
 

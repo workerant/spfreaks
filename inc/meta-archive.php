@@ -1,4 +1,7 @@
 <div class="columns large-12">
+
+  <p><a href="/">home</a> / <a href="/blog/">blog</a><p>
+
   <?php $post = $posts[0]; ?>
   <?php if (is_category()) : ?>
     <h1 class="pagetitle"><?php single_cat_title(); ?> <?php echo $pageNumber = (get_query_var('paged')) ? '&raquo; Page '.get_query_var('paged') : ''; ?></h1>
@@ -13,5 +16,4 @@
   <?php elseif (is_year()): ?>
     <h1 class="pagetitle">Archive for <?php the_time('Y'); ?></h1>
   <?php endif; ?>
-  <hr>
 </div>

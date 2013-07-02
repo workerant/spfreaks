@@ -99,17 +99,16 @@ h4.border-bottom  {
   margin-bottom: 1em;
   margin-top: .6em;
 }
+h6.border-bottom {
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  margin-top: .6em;
+  border-bottom: 2px solid black;
+}
 h3.like-to {
   @media #{$small} {
     margin-top: 80px;
-  }
-}
-h6 {
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  .home & {
-    position: relative;
-    top: -10px;
   }
 }
 h1.pagetitle {
@@ -136,6 +135,13 @@ h1.pagetitle {
 }
 .text-right {
   text-align: right;
+}
+.sidebar {
+  li {
+    font-size: 12px;
+    text-transform: uppercase;
+
+  }
 }
 a.panel {
   display: block;
@@ -237,11 +243,16 @@ a.news-thumbnail {
   overflow: hidden;
   margin-bottom: 30px;
   color: #000;
+  &:hover {
+    h4 {
+      color: $red;
+    }
+  }
   .over {
     display: block;
     width: 100%;
     position: absolute;
-    height: 167px;
+    height: 100px;
     padding: 20px;
     overflow: hidden;
     bottom: 0;

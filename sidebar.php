@@ -11,14 +11,25 @@
 ?>
 
 <!-- Sidebar -->
-<aside class="large-3 columns sidebar">
+<aside class="large-4 columns sidebar">
 
-<?php if ( dynamic_sidebar('Sidebar Right') ) : elseif( current_user_can( 'edit_theme_options' ) ) : ?>
+<h4 class="uppercase border-bottom">&nbsp;</h4>
 
-	<h5><?php _e( 'No widgets found.', 'foundaton' ); ?></h5>
-	<p><?php printf( __( 'It seems you don\'t have any widgets in your sidebar! Would you like to %s now?', 'foundation' ), '<a href=" '. get_admin_url( '', 'widgets.php' ) .' ">populate your sidebar</a>' ); ?></p>
+<h6 class="border-bottom">Recently Added Items</h6>
+<div class="row">
+<?php $the_query = new WP_Query(array( 'post_type' => 'item', 'posts_per_page' => 3 ));
+  while ($the_query->have_posts()) : $the_query->the_post(); ?>
+  <?php if ( has_post_thumbnail()) : ?>
+    <div class="columns small-4">
+      <a href="<?php the_permalink(); ?>" class="item-thumbnail"> 
+        <?php the_post_thumbnail('thumbnail'); ?>
+      </a>
+    </div>
+  <?php endif; ?>
+<?php endwhile; ?>
+</div>
 
-<?php endif; ?>
+<?php if ( dynamic_sidebar('Sidebar Right') ) : elseif( current_user_can( 'edit_theme_options' ) ) : ?> <?php endif; ?>
 
 </aside>
 <!-- End Sidebar -->

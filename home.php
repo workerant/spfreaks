@@ -35,9 +35,9 @@
                 <a href="<?php the_permalink(); ?>" class="news-thumbnail"> 
                   <?php the_post_thumbnail('large'); ?>
                   <span class="over">
-                    <h5><?php the_title(); ?></h5>
+                    <h4><?php the_title(); ?></h4>
                     <h5><?php the_date(); ?></h5>
-                    <p><?php the_excerpt() ?></p>
+<!--                     <p><?php the_excerpt() ?></p> -->
                   </span>
                 </a>
             <?php endif; ?>

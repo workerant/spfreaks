@@ -1,5 +1,10 @@
 <?php
 
+function your_excerpt_length($length) {
+    return 100;
+}
+add_filter('excerpt_length', 'your_excerpt_length');
+
 function get_terms_chekboxes($taxonomies, $args) {
   $terms = get_terms($taxonomies, $args);
   foreach($terms as $term){

@@ -14,12 +14,14 @@ get_header(); ?>
     <?php get_template_part( 'inc/meta', 'archive'); ?>
 
     <!-- Main Content -->
-    <div class="large-9 columns" role="main">
+    <div class="large-8 columns" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
+      <h4 class="uppercase border-bottom">In the News</h4>
+
 			<?php while ( have_posts() ) : the_post(); ?>
-      
+
       <?php get_template_part( 'inc/loop', get_post_type()); ?>
 
 			<?php endwhile; ?>
@@ -31,11 +33,10 @@ get_header(); ?>
 			
 		<?php endif; ?>
 
-    <div class="row">
-      <div class="columns large-12 headline">
-        <?php foundation_pagination(); ?>
+      <div class="navigation row">
+        <div class="columns small-2"><h6><?php previous_posts_link('<span class="carrot"><</span> Previous'); ?></h6></div>
+        <div class="columns small-2 text-right"><h6><?php next_posts_link('Next <span class="carrot">></span>'); ?></h6></div>
       </div>
-    </div>
     </div>
     <!-- End Main Content -->
 

@@ -12,10 +12,12 @@
 get_header(); ?>
 
     <!-- Main Content -->
-    <div class="large-9 columns" role="main">
+    <div class="large-8 columns" role="main">
+    
+    <p><a href="/">home</a> / <a href="/blog/">blog</a>  / blog detail<p>
 
 		<?php if ( have_posts() ) : ?>
-
+      
 			<?php while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

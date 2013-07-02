@@ -1384,10 +1384,9 @@ hr.texture { margin: 0; border: none; height: 30px; background-image: url(../img
 
 h3.border-bottom, h4.border-bottom { line-height: 1.4; margin-bottom: 1em; margin-top: .6em; }
 
-@media only screen and (min-width: 43.75em) { h3.like-to { margin-top: 80px; } }
+h6.border-bottom { text-transform: uppercase; line-height: 1.4; margin-bottom: 1em; margin-top: .6em; border-bottom: 2px solid black; }
 
-h6 { letter-spacing: .08em; text-transform: uppercase; }
-.home h6 { position: relative; top: -10px; }
+@media only screen and (min-width: 43.75em) { h3.like-to { margin-top: 80px; } }
 
 h1.pagetitle { text-transform: uppercase; font-family: "freight-sans-pro",sans-serif; font-style: normal; font-weight: 900; }
 
@@ -1400,6 +1399,8 @@ h1.pagetitle { text-transform: uppercase; font-family: "freight-sans-pro",sans-s
 .black { background: black; color: white; }
 
 .text-right { text-align: right; }
+
+.sidebar li { font-size: 12px; text-transform: uppercase; }
 
 a.panel { display: block; border-color: black; text-align: center; font-size: .9em; padding: 0 0 0; position: relative; }
 a.panel h5 { color: #e93b01; width: 100%; text-align: center; padding-top: 2em; }
@@ -1429,7 +1430,8 @@ a.item-thumbnail .over { display: none; width: 100%; position: absolute; height:
 a.item-thumbnail .over p { color: #000; }
 
 a.news-thumbnail { display: block; position: relative; height: 340px; overflow: hidden; margin-bottom: 30px; color: #000; }
-a.news-thumbnail .over { display: block; width: 100%; position: absolute; height: 167px; padding: 20px; overflow: hidden; bottom: 0; left: 0; background: #fff; background: rgba(255, 255, 255, 0.9); }
+a.news-thumbnail:hover h4 { color: #e93b01; }
+a.news-thumbnail .over { display: block; width: 100%; position: absolute; height: 100px; padding: 20px; overflow: hidden; bottom: 0; left: 0; background: #fff; background: rgba(255, 255, 255, 0.9); }
 
 .row.tagline { margin-top: 1em; margin-bottom: 2.4em; }
 

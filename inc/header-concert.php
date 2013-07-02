@@ -1,6 +1,6 @@
-    <p><a href="/">home</a> / <a href="/<?php get_post_type(); ?>/">Tours &amp; Recordings</a><p>
+    <p><a href="/">home</a> / <a href="/concerts/">tour &amp; recordings</a><p>
 
-    <h1 class="pagetitle">Tours &amp; Recordings</h1>
+    <h1 class="pagetitle">Tour &amp; Recordings</h1>
 
     <div class="row bgblack">
       <div class="columns large-offset-2 large-10">
