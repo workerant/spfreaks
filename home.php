@@ -37,7 +37,6 @@
                   <span class="over">
                     <h4><?php the_title(); ?></h4>
                     <h5><?php the_date(); ?></h5>
-<!--                     <p><?php the_excerpt() ?></p> -->
                   </span>
                 </a>
             <?php endif; ?>

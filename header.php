@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if lte IE 8]>  <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
@@ -20,10 +20,11 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width" />
 
 <title><?php wp_title(''); ?></title>
+
+<!--[if lte IE 8]><script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script><![endif]-->
 
 <script type="text/javascript" src="//use.typekit.net/uwi7dmy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
