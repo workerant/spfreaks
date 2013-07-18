@@ -129,8 +129,6 @@ get_header(); ?>
 
                 <?php wp_reset_postdata(); ?>
 
-                <?php endif; ?>
-
               </div>
               <div class="columns large-3">
                 <h5 class="uppercase">Track Detail</h5>
@@ -154,6 +152,8 @@ get_header(); ?>
                 <h5 class="uppercase">Also Available On</h5>
               </div>
             </div>
+
+            <?php endif; ?>
 
             </div>
           </article>

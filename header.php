@@ -38,7 +38,12 @@
 		<div class="large-12 columns">
 			<div class="row">
 				<div class="large-12 small-12 columns headline text-center large-text-right small">
+					<?php if (is_user_logged_in()): ?>
+					<?php global $current_user; $username = $current_user->user_login; ?>
+					<a href="/members/<?php echo $username; ?>">My Profile</a>
+					<?php else: ?>
 					<a href="/login">Sign In</a> | <a href="/register/">Register</a>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="row">
