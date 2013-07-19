@@ -324,6 +324,11 @@ $meta_boxes[] = array(
       'name'  => __( 'Country Printed', 'rwmb' ),
       'id'    => "{$prefix}country-printed",
       'type'  => 'text'
+    ),
+    array(
+      'name'  => __( 'Legacy Image Objects', 'rwmb' ),
+      'id'    => "ImageObjects",
+      'type'  => 'textarea'
     )
   )
 );

@@ -2,6 +2,10 @@
     <div class="columns large-2">
       <?php if ( has_post_thumbnail()) : ?>
         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+      <?php else: ?>
+        <?php $imageObjects = get_post_meta($post->ID, 'ImageObjects', true); ?>
+        <?php $imageArrays  = json_decode($imageObjects, true); ?>
+        <a href="<?php the_permalink(); ?>"><?php echo '<img src="/migrated-assets'.$imageArrays[0]["imageurl"].'" title="'.$imageArrays[0]["imagename"].'">'; ?></a>
       <?php endif; ?>
     </div>
     <?php

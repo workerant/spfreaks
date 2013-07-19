@@ -91,6 +91,14 @@ get_header(); ?>
                       </div>
                     <?php endforeach; ?>
                   </div>
+                <?php else: ?>
+                  <div class="row">
+                  <?php $imageObjects = get_post_meta($post->ID, 'ImageObjects', true); ?>
+                  <?php $imageArrays  = json_decode($imageObjects, true);
+                    foreach ($imageArrays as $imageArray) {
+                      echo '<div class="columns large-3"><img src="/migrated-assets'.$imageArray["imageurl"].'" title="'.$imageArray["imagename"].'"></div>';
+                    } ?>
+                  </div>
                 <?php endif; ?>
               </div>
               <div class="columns large-6">

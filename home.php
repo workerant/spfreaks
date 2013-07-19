@@ -8,17 +8,21 @@
             <!-- 16 total, moving over 2 at at time not infinite -->
             <?php $the_query = new WP_Query(array( 'post_type' => 'item', 'posts_per_page' => 6 ));
               while ($the_query->have_posts()) : $the_query->the_post(); ?>
-              <?php if ( has_post_thumbnail()) : ?>
                 <div class="columns large-4 small-4">
-                  <a href="<?php the_permalink(); ?>" class="item-thumbnail"> 
-                    <?php the_post_thumbnail('thumbnail'); ?>
+                  <a href="<?php the_permalink(); ?>" class="item-thumbnail">
+                    <?php if ( has_post_thumbnail()) : ?>
+                      <?php the_post_thumbnail('thumbnail'); ?>
+                    <?php else: ?>
+                      <?php $imageObjects = get_post_meta($post->ID, 'ImageObjects', true); ?>
+                      <?php $imageArrays  = json_decode($imageObjects, true); ?>
+                      <?php echo '<img src="/migrated-assets'.$imageArrays[0]["imageurl"].'" title="'.$imageArrays[0]["imagename"].'">'; ?>
+                    <?php endif; ?>
                     <span class="over">
                       <h6><?php the_title(); ?></h6>
                       <h6> <?php $terms_as_text = get_the_term_list( $post->ID, 'country', '', ', ', '' ) ; echo strip_tags($terms_as_text, '');?></h6>
                     </span> 
                   </a>
                 </div>
-              <?php endif; ?>
             <?php endwhile; ?>
           </div>
           <div class="row">
